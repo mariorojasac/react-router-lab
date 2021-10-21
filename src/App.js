@@ -1,12 +1,22 @@
-import {Route, Switch} from 'react-router-dom'
-import './App.css';
+import "./App.css";
+import { Route, Switch } from "react-router-dom";
 function App() {
   return (
     <div className="App">
-      <Route></Route>
-      <Route></Route>
-      <Route></Route>
-      <Route></Route>
+      <Switch>
+        <Route exact path="/">
+          <div> "This is the Homepage page"</div>
+        </Route>
+        <Route path="/about">
+          <div> "This is the Homepage page"</div>
+        </Route>
+        <Route path="/stocks/:symbol">
+          <div> "This is the Homepage page"</div>
+        </Route>
+        <Route path="stocks">
+          <div> "This is the Homepage page"</div>
+        </Route>
+      </Switch>
     </div>
   );
 }
